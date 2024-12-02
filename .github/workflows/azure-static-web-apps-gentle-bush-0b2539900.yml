@@ -24,6 +24,8 @@ jobs:
         uses: actions/setup-node@v3
       - name: Install Dependencies
         uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false # optional if users would like to use package-lock.json
       - name: Build Project
         run: npm run build
       - name: Upload production-ready build files
